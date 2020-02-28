@@ -61,3 +61,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# VS and VScode metadata directories
+.vs/
+.vscode/
+
+# Resources directory
+Resources/
+
