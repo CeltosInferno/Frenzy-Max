@@ -13,7 +13,12 @@ public class Frenzy : MonoBehaviour
     public enum FrenesyState { Lower, Upper }
 
     public int Value { get; private set; } = 0;
-    public FrenesyState FrenesyMode { get; private set; } = FrenesyState.Lower;
+    public FrenesyState FrenesyMode { get; private set; } = FrenesyState.Upper;
+
+    void Start()
+    {
+        Switch();
+    }
 
     // Update is called once per frame
     void Update()
