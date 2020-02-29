@@ -25,7 +25,7 @@ namespace AttackSystem
         // Start is called before the first frame update
         void Start()
         {
-            animator = GetComponent<Animator>();
+            animator = GetComponentInParent<Animator>();
         }
 
         // Update is called once per frame
@@ -40,13 +40,14 @@ namespace AttackSystem
                     timer = 0.0f;
                 }
 
-                if (Input.GetButton(inputAxisSequence[seqCursor]))
+                if (Input.GetButtonDown(inputAxisSequence[seqCursor]))
                 {
                     seqCursor++;
                     timer = 0.0f;
                 }
             }
-            else
+
+            if (seqCursor >= inputAxisSequence.Length)
             {
                 Triggered = true;
                 animator.ResetTrigger(animationResetTrigger);
@@ -69,7 +70,7 @@ namespace AttackSystem
 
         private void Trigger(params RaycastHit[] hits)
         {
-            gameObject.GetComponent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
+            gameObject.GetComponentInParent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
         }
     }
 }
