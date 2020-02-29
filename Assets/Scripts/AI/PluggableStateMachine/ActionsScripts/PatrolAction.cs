@@ -12,6 +12,8 @@ public class PatrolAction : Action
 
     private void Patrol(StateController controller)
     {
+        if (controller.wayPointList.Count <= 0) return;
+
         controller.navMeshAgent.destination = controller.wayPointList[controller.nextWayPoint].position;
         controller.navMeshAgent.isStopped = false;
 

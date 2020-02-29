@@ -21,10 +21,10 @@ public class StateController : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    public void SetupAI()
-    {
+    //public void SetupAI()
+    //{
 
-    }
+    //}
 
     void Update()
     {

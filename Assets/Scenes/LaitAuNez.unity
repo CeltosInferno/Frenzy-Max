@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 530686409}
   - component: {fileID: 530686408}
   - component: {fileID: 530686407}
+  - component: {fileID: 530686413}
   - component: {fileID: 530686412}
   m_Layer: 0
   m_Name: Capsule
@@ -346,16 +347,24 @@ MonoBehaviour:
   ennemyStats: {fileID: 11400000, guid: 970652c2676f8984ea9340fa9aa87bfc, type: 2}
   currentState: {fileID: 11400000, guid: 2b6458d3d3c38ba43994bb2ce53abf14, type: 2}
   eyes: {fileID: 1906356131}
-  wayPointList:
-  - {fileID: 1425813188}
-  - {fileID: 275111276}
-  - {fileID: 267753901}
-  - {fileID: 463806098}
+  wayPointList: []
   remainState: {fileID: 11400000, guid: 55dcb931e0c79124cac9df86a8c62450, type: 2}
   navMeshAgent: {fileID: 0}
   nextWayPoint: 0
   chaseTarget: {fileID: 0}
-  stateTimeElapsed: 0
+--- !u!114 &530686413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530686406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dc590ee45f23a45864e28259da0661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ennemyStats: {fileID: 11400000, guid: 970652c2676f8984ea9340fa9aa87bfc, type: 2}
 --- !u!1 &810711194
 GameObject:
   m_ObjectHideFlags: 0

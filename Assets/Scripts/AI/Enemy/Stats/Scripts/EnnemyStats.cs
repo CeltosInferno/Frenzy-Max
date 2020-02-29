@@ -16,4 +16,5 @@ public class EnnemyStats : ScriptableObject
     public int attackDamage;
     public int searchDuration;
     public int searchingTurnSpeed;
+    public int lifePoints;
 }

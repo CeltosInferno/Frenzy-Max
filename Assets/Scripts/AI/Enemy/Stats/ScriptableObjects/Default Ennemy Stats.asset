@@ -21,3 +21,4 @@ MonoBehaviour:
   attackDamage: 50
   searchDuration: 8
   searchingTurnSpeed: 120
+  lifePoints: 5

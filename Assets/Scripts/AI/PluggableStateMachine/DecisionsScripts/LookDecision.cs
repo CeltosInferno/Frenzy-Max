@@ -24,9 +24,6 @@ public class LookDecision : Decision
             controller.chaseTarget = hit.transform;
             return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
