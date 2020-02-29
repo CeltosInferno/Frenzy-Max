@@ -8,9 +8,9 @@ using UnityEngine.SocialPlatforms;
 public class EnnemyStats : ScriptableObject
 {
     public float moveSpeed;
-    public int lookRange;
-    public int lookSphereCastRadius;
-    public int attackRange;
+    public float lookRange;
+    public float lookSphereCastRadius;
+    public float attackRange;
     public int attackRate;
     public int attackForce;
     public int attackDamage;

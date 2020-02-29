@@ -13,14 +13,23 @@ public class AttackAction : Action
     public void Attack(StateController controller)
     {
         RaycastHit hit;
+        AttackSystem attackSystem = controller.transform.GetComponent<AttackSystem>();
 
         Debug.DrawRay(controller.eyes.position, controller.eyes.forward.normalized * controller.ennemyStats.attackRange, Color.red);
 
-        if (Physics.SphereCast(controller.eyes.position, controller.ennemyStats.lookSphereCastRadius,
+        //if (Physics.SphereCast(controller.eyes.position, controller.ennemyStats.lookSphereCastRadius,
+        //        controller.eyes.forward, out hit, controller.ennemyStats.attackRange)
+        //    && hit.collider.CompareTag("Player"))
+        if (Physics.Raycast(controller.eyes.position,
                 controller.eyes.forward, out hit, controller.ennemyStats.attackRange)
             && hit.collider.CompareTag("Player"))
         {
-            Debug.Log("Attack !");
+            attackSystem.fighting = true;
+            attackSystem.RandomAttack(controller.ennemyStats.attackDamage);
+        }
+        else
+        {
+            attackSystem.fighting = false;
         }
     }
 }

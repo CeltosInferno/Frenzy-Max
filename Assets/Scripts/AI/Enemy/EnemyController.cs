@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     public EnnemyStats ennemyStats;
     
     private NavMeshAgent navMeshAgent;
-    private int lifePoints;
+    public int lifePoints;
 
     // Start is called before the first frame update
     void Start()

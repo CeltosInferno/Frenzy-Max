@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class StateController : MonoBehaviour
 {
@@ -13,12 +14,16 @@ public class StateController : MonoBehaviour
     public State remainState;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
+    [HideInInspector] public ThirdPersonCharacter thirdPersonCharacter;
     [HideInInspector] public int nextWayPoint;
     [HideInInspector] public Transform chaseTarget;
 
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        thirdPersonCharacter = GetComponent<ThirdPersonCharacter>();
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updatePosition = true;
     }
 
     //public void SetupAI()
