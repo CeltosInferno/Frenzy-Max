@@ -11,20 +11,22 @@ namespace AttackSystem
         public string[] captureTags;
         public float radius = 2.0f;
         public int dealtDamageFrenzyAmount = 1;
+        public string animTriggerName = "Punch";
 
         private Animator animator;
 
         // Start is called before the first frame update
         void Start()
         {
-            animator = GetComponent<Animator>();
+            animator = GetComponentInParent<Animator>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetButton(inputAxisName) && CheckNoCombo())
+            if (Input.GetButtonDown(inputAxisName) && CheckNoCombo())
             {
+                animator.SetTrigger(animTriggerName);
                 Transform tr = animator.GetBoneTransform(HumanBodyBones.LeftHand);
                 RaycastHit[] hits = Physics.SphereCastAll(tr.position, radius, Vector3.zero);
                 EnumerableQuery<RaycastHit> query = new EnumerableQuery<RaycastHit>(hits);
@@ -43,7 +45,7 @@ namespace AttackSystem
 
         private void Trigger(params RaycastHit[] hits)
         {
-            gameObject.GetComponent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
+            gameObject.GetComponentInParent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
         }
     }
 }
