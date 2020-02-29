@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
     private int timer;
     private bool started = false;
 
-    public string TimeString { get { return (timer / 100.0f).ToString(); } }
+    public string TimeString { get { return TimeToString(timer); } }
 
     // Update is called once per frame
     void Update()
@@ -33,5 +33,15 @@ public class Timer : MonoBehaviour
     public void ResetTimer(bool forceResetIfStarted = false)
     {
         if (!started || forceResetIfStarted) timer = 0;
+    }
+
+    public static string TimeToString(int time)
+    {
+        float sec = (time / 1000.0f);
+        int minutes = (int) System.Math.Floor(sec) / 60;
+        sec -= (minutes * 60);
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+        sb.AppendFormat("{0}'{1}''", minutes, sec);
+        return sb.ToString();
     }
 }
