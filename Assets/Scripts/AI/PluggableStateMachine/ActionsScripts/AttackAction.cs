@@ -13,7 +13,7 @@ public class AttackAction : Action
     public void Attack(StateController controller)
     {
         RaycastHit hit;
-        AttackSystem attackSystem = controller.transform.GetComponent<AttackSystem>();
+        EnemyAttackSystem attackSystem = controller.transform.GetComponent<EnemyAttackSystem>();
 
         Debug.DrawRay(controller.eyes.position, controller.eyes.forward.normalized * controller.ennemyStats.attackRange, Color.red);
 
