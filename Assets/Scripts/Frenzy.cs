@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Frenzy : MonoBehaviour
 {
@@ -18,6 +17,7 @@ public class Frenzy : MonoBehaviour
     [SerializeField] private int absSwitchValue = 10;
     [SerializeField] private GameObject lowerPlayerEntity = null;
     [SerializeField] private GameObject upperPlayerEntity = null;
+    private Animator animator;
 
     public enum FrenesyState { Lower, Upper }
 
@@ -27,6 +27,7 @@ public class Frenzy : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponentInParent<Animator>();
         Init();
     }
 
@@ -64,7 +65,7 @@ public class Frenzy : MonoBehaviour
     private void Die()
     {
         Debug.Log("You are dead !");
-        SceneManager.LoadScene(0);
+        animator.SetBool("Death", true);
     }
 
     private void Switch()
