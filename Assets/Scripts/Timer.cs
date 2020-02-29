@@ -41,7 +41,7 @@ public class Timer : MonoBehaviour
         int minutes = (int) System.Math.Floor(sec) / 60;
         sec -= (minutes * 60);
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
-        sb.AppendFormat("{0}'{1}''", minutes, sec);
+        sb.AppendFormat("{0}'{1:f3}''", minutes, sec);
         return sb.ToString();
     }
 }

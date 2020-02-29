@@ -29,6 +29,7 @@ public class HighScores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(Application.persistentDataPath);
         path = Application.persistentDataPath + "/" + fileName;
         if (File.Exists(path))
         {
@@ -71,9 +72,11 @@ public class HighScores : MonoBehaviour
 
     public void Reset()
     {
-        for (int i = 0; i < Scores.Count; i++)
+        Scores.Clear();
+        Scores.Capacity = highScoreSize + 1;
+        for (int i = 0; i < highScoreSize; i++)
         {
-            Scores[i] = useDefaultScore ? linearDefaultScoreIncrement * i : 0;
+            Scores.Add(useDefaultScore ? linearDefaultScoreIncrement * i : 0);
         }
 
         Sort();
