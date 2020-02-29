@@ -18,7 +18,10 @@ public class CheckLevelEnd : MonoBehaviour
         {
             Debug.Log("Level cleared");
             Cleared = true;
-            // Do Stuff
+            foreach (var tp in FindObjectsOfType<Teleporter>())
+            {
+                tp.gameObject.SetActive(true);
+            }
         }
     }
 }
