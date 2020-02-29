@@ -15,10 +15,10 @@ public class LookDecision : Decision
     {
         RaycastHit hit;
 
-        Debug.DrawRay(controller.eyes.position,controller.eyes.forward.normalized * controller.lookRange, Color.green);
+        Debug.DrawRay(controller.eyes.position,controller.eyes.forward.normalized * controller.ennemyStats.lookRange, Color.green);
 
-        if (Physics.SphereCast(controller.eyes.position, controller.lookSphereCastRadius,
-                controller.eyes.forward, out hit, controller.lookRange)
+        if (Physics.SphereCast(controller.eyes.position, controller.ennemyStats.lookSphereCastRadius,
+                controller.eyes.forward, out hit, controller.ennemyStats.lookRange)
             && hit.collider.CompareTag("Player"))
         {
             controller.chaseTarget = hit.transform;

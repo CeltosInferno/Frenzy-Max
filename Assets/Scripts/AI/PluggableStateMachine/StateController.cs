@@ -5,10 +5,8 @@ using UnityEngine.AI;
 
 public class StateController : MonoBehaviour
 {
+    public EnnemyStats ennemyStats;
     public State currentState;
-
-    public int lookSphereCastRadius;
-    public int lookRange;
 
     public Transform eyes;
     public List<Transform> wayPointList;
@@ -17,7 +15,6 @@ public class StateController : MonoBehaviour
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public int nextWayPoint;
     [HideInInspector] public Transform chaseTarget;
-    [HideInInspector] public float stateTimeElapsed;
 
     void Awake()
     {
@@ -40,16 +37,5 @@ public class StateController : MonoBehaviour
         {
             currentState = nextState;
         }
-    }
-
-    public bool CheckIfCountDownElapsed(float duration)
-    {
-        stateTimeElapsed += Time.deltaTime;
-        return (stateTimeElapsed >= duration);
-    }
-
-    private void OnExitState()
-    {
-
     }
 }
