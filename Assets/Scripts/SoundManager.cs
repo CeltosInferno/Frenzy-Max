@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioMixer audioMixer = null;
     [SerializeField] private AudioMixerGroup musicMixerGroup = null;
     [SerializeField] private AudioMixerGroup soundMixerGroup = null;
 
@@ -30,10 +29,6 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        audioMixer.SetFloat("masterVolume", PlayerPrefs.GetFloat("masterVolume", 0));
-        audioMixer.SetFloat("musicVolume", PlayerPrefs.GetFloat("musicVolume", -30));
-        audioMixer.SetFloat("soundVolume", PlayerPrefs.GetFloat("soundVolume", 0));
-
         AudioSource[] src = GetComponents<AudioSource>();
         Debug.Assert(src.Length >= 2);
         if (src.Length < 2) Application.Quit();
