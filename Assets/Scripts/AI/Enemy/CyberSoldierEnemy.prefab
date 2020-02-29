@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 8589623500150739038}
   m_Layer: 0
   m_Name: CyberSoldierEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1324,7 +1324,6 @@ GameObject:
   - component: {fileID: 8589623499394924657}
   - component: {fileID: 8589623500176169201}
   - component: {fileID: 8589623500176169200}
-  - component: {fileID: 8589623500176169203}
   m_Layer: 0
   m_Name: CyberSoldier
   m_TagString: Untagged
@@ -1466,25 +1465,6 @@ CapsuleCollider:
   m_Height: 1.9559842
   m_Direction: 1
   m_Center: {x: 0.0014931089, y: 0.8790762, z: -0.07708773}
---- !u!95 &8589623500176169203
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8589623499383426423}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8589623499383426425
 GameObject:
   m_ObjectHideFlags: 0
