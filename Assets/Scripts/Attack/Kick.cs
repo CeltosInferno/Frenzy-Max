@@ -22,7 +22,7 @@ namespace AttackSystem
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(inputAxisName))
+            if (Input.GetButton(inputAxisName) && CheckNoCombo())
             {
                 Transform tr = animator.GetBoneTransform(HumanBodyBones.RightFoot);
                 RaycastHit[] hits = Physics.SphereCastAll(tr.position, radius, Vector3.zero);
@@ -30,6 +30,15 @@ namespace AttackSystem
                 Trigger(query.Where(h => captureTags.Contains(h.collider.gameObject.tag)).ToArray());
             }
         }
+        private bool CheckNoCombo()
+        {
+            foreach (var combo in GetComponents<Combo>())
+            {
+                if (combo.Triggered) return false;
+            }
+            return true;
+        }
+
 
         protected abstract void Trigger(params RaycastHit[] hits);
     }

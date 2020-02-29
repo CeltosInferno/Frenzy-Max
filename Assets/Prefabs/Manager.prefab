@@ -59,7 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7191accd20dea0843bc7ea83ad43f144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 839d8316ab181f642bb6fbb1b04e8ac6, type: 2}
   musicMixerGroup: {fileID: 3826323270220342519, guid: 839d8316ab181f642bb6fbb1b04e8ac6,
     type: 2}
   soundMixerGroup: {fileID: 4105788577132798276, guid: 839d8316ab181f642bb6fbb1b04e8ac6,
@@ -765,7 +764,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6115328492640509311}
-  - {fileID: 4839348776422977380}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -782,63 +780,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTag: Manager
---- !u!1 &2597860147645601196
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4839348776422977380}
-  - component: {fileID: 3281061239905311001}
-  - component: {fileID: 8660324238558493278}
-  m_Layer: 0
-  m_Name: SetupFrenesyModes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4839348776422977380
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597860147645601196}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2587906119581727055}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3281061239905311001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597860147645601196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c1f492d07cbc4581952bf69d71b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frenesyModeIdentifierTag: lower
-  prefab: {fileID: 0}
---- !u!114 &8660324238558493278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597860147645601196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c1f492d07cbc4581952bf69d71b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frenesyModeIdentifierTag: upper
-  prefab: {fileID: 0}

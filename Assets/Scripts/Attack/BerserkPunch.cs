@@ -6,9 +6,11 @@ namespace AttackSystem
 {
     public sealed class BerserkPunch : Punch
     {
+        public int dealtDamageFrenzyAmount = 1;
+
         protected override void Trigger(params RaycastHit[] hits)
         {
-            throw new System.NotImplementedException();
+            gameObject.GetComponent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
         }
     }
 }

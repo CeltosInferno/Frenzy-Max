@@ -6,9 +6,11 @@ namespace AttackSystem
 {
     public sealed class BerserkKick : Kick
     {
+        public int dealtDamageFrenzyAmount = 1;
+
         protected override void Trigger(params RaycastHit[] hits)
         {
-            //gameObject.GetComponent<Frenzy>().Add();
+            gameObject.GetComponent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
         }
     }
 }
