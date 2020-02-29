@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelFactory.unity
     guid: 2c8a003d594ce9746b6ad4fe07c3313a
+  - enabled: 1
+    path: Assets/Scenes/map_octogone.unity
+    guid: 435a4d03f12fd1847b3f4fd114b78cfc
   m_configObjects: {}
