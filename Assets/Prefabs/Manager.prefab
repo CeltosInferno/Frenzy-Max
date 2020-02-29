@@ -745,6 +745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2587906119581727055}
   - component: {fileID: 2587906119581727053}
+  - component: {fileID: 947742970272317205}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Manager
@@ -780,3 +781,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTag: Manager
+--- !u!114 &947742970272317205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2587906119581727054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f235c926a2aff842bc06f47a3dfc882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  excludeScenes:
+  - TtgcScene
