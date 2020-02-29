@@ -11,7 +11,7 @@ public class TextChrono : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = FindObjectOfType<Timer>();
+        timer = GameObject.FindGameObjectWithTag("Manager").GetComponentInChildren<Timer>();
         textTimer = GetComponent<Text>();
         timer.StartTimer();
     }
