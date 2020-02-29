@@ -68,6 +68,13 @@ public class Frenzy : MonoBehaviour
         animator.SetBool("Death", true);
     }
 
+    public void Reset()
+    {
+        Value = 0;
+        FrenesyMode = FrenesyState.Lower;
+        animator.SetBool("Death", false);
+    }
+
     private void Switch()
     {
         if (FrenesyMode == FrenesyState.Lower)
