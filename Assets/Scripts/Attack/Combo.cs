@@ -46,7 +46,8 @@ namespace AttackSystem
                     timer = 0.0f;
                 }
             }
-            else
+
+            if (seqCursor >= inputAxisSequence.Length)
             {
                 Triggered = true;
                 animator.ResetTrigger(animationResetTrigger);

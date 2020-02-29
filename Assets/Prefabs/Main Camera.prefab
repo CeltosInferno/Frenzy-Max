@@ -98,10 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xMargin: 1
   yMargin: 1
-  xSmooth: 8
-  ySmooth: 8
+  xSmooth: 2
+  ySmooth: 2
   zMargin: 1
-  zSmooth: 8
+  zSmooth: 2
   maxXAndYAndZ: {x: 100, y: 100, z: 100}
   minXAndYAndZ: {x: -100, y: -100, z: -100}
   offset: {x: 0, y: 0, z: 0}

@@ -4945,6 +4945,7 @@ MonoBehaviour:
   - Enemy
   radius: 2
   dealtDamageFrenzyAmount: 1
+  animTriggerName: Kick
 --- !u!114 &9162348926807610940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4962,6 +4963,7 @@ MonoBehaviour:
   - Enemy
   radius: 2
   dealtDamageFrenzyAmount: 1
+  animTriggerName: Punch
 --- !u!114 &3408024453492419198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5061,6 +5063,7 @@ MonoBehaviour:
   - Enemy
   radius: 2
   dealtDamageFrenzyAmount: -1
+  animTriggerName: Kick
 --- !u!114 &2810244989199537812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5078,6 +5081,7 @@ MonoBehaviour:
   - Enemy
   radius: 2
   dealtDamageFrenzyAmount: -1
+  animTriggerName: Punch
 --- !u!114 &5020685621070113755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5094,8 +5098,8 @@ MonoBehaviour:
   - Punch
   - Punch
   - Punch
-  timeBetweenInputs: 1
-  castBone: 17
+  timeBetweenInputs: 5
+  castBone: 18
   radius: 2
   captureTags:
   - Enemy
@@ -5118,8 +5122,8 @@ MonoBehaviour:
   - Kick
   - Kick
   - Kick
-  timeBetweenInputs: 0
-  castBone: 6
+  timeBetweenInputs: 5
+  castBone: 5
   radius: 2
   captureTags:
   - Enemy
