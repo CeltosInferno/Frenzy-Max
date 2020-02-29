@@ -6,9 +6,9 @@ namespace AttackSystem
 {
     public sealed class BerserkKick : Kick
     {
-        protected override void Trigger()
+        protected override void Trigger(params RaycastHit[] hits)
         {
-            throw new System.NotImplementedException();
+            //gameObject.GetComponent<Frenzy>().Add();
         }
     }
 }

@@ -6,7 +6,7 @@ namespace AttackSystem
 {
     public sealed class MobiPunch : Punch
     {
-        protected override void Trigger()
+        protected override void Trigger(params RaycastHit[] hits)
         {
             throw new System.NotImplementedException();
         }
