@@ -4092,7 +4092,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-189594
+  m_Name: pb_Mesh-250622
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6135,6 +6135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 556957338850199626, guid: 6abd3258b04369a41b8db7b4b961aa03,
+        type: 3}
+      propertyPath: nextRoom
+      value: TutoBerserk
       objectReference: {fileID: 0}
     - target: {fileID: 1217887046691655793, guid: 6abd3258b04369a41b8db7b4b961aa03,
         type: 3}

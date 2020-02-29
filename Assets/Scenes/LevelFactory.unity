@@ -7503,7 +7503,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-223438
+  m_Name: pb_Mesh-252922
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19542,7 +19542,7 @@ PrefabInstance:
     - target: {fileID: 556957338850199626, guid: 6abd3258b04369a41b8db7b4b961aa03,
         type: 3}
       propertyPath: nextRoom
-      value: map_octogone
+      value: LevelArena
       objectReference: {fileID: 0}
     - target: {fileID: 1217887046691655793, guid: 6abd3258b04369a41b8db7b4b961aa03,
         type: 3}
@@ -72747,8 +72747,8 @@ Transform:
   - {fileID: 1790586331}
   - {fileID: 1521370572}
   - {fileID: 1250815533}
-  - {fileID: 373057615}
   - {fileID: 1473874859}
+  - {fileID: 373057615}
   - {fileID: 656951102}
   m_Father: {fileID: 1382380607}
   m_RootOrder: 2
