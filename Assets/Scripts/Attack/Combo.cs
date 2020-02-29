@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AttackSystem
 {
-    public abstract class Combo : MonoBehaviour
+    public class Combo : MonoBehaviour
     {
         public string[] inputAxisSequence;
         public float timeBetweenInputs;
@@ -14,6 +14,7 @@ namespace AttackSystem
         public string[] captureTags;
         public string animationResetTrigger;
         public string animationSetTrigger;
+        public int dealtDamageFrenzyAmount = 1;
 
         private int seqCursor = 0;
         private float timer = 0.0f;
@@ -66,6 +67,9 @@ namespace AttackSystem
             yield return null;
         }
 
-        protected abstract void Trigger(params RaycastHit[] hits);
+        private void Trigger(params RaycastHit[] hits)
+        {
+            gameObject.GetComponent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
+        }
     }
 }

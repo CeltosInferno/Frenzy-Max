@@ -5,11 +5,12 @@ using UnityEngine;
 
 namespace AttackSystem
 {
-    public abstract class Kick : MonoBehaviour
+    public class Kick : MonoBehaviour
     {
         public string inputAxisName = "Kick";
         public string[] captureTags;
         public float radius = 2.0f;
+        public int dealtDamageFrenzyAmount = 1;
 
         private Animator animator;
 
@@ -39,7 +40,9 @@ namespace AttackSystem
             return true;
         }
 
-
-        protected abstract void Trigger(params RaycastHit[] hits);
+        private void Trigger(params RaycastHit[] hits)
+        {
+            gameObject.GetComponent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
+        }
     }
 }
