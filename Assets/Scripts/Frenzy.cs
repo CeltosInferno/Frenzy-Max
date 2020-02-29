@@ -28,6 +28,11 @@ public class Frenzy : MonoBehaviour
         if (FrenesyMode == FrenesyState.Upper && Value <= -absSwitchValue) Switch();
     }
 
+    public void Add(int amount)
+    {
+        Value += amount;
+    }
+
     private void Die()
     {
         Debug.Log("You are dead !");
