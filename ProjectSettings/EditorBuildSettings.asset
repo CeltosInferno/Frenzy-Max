@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TutoMobi.unity
+    guid: 70886386b680a864e9b8a7c815f5e406
+  - enabled: 1
+    path: Assets/Scenes/TutoBerserk.unity
+    guid: 5f4932119fb1dda4e973f9ddeb2ba96a
+  - enabled: 1
+    path: Assets/Scenes/LevelFactory.unity
+    guid: 2c8a003d594ce9746b6ad4fe07c3313a
+  - enabled: 1
+    path: Assets/Scenes/LevelArena.unity
+    guid: 435a4d03f12fd1847b3f4fd114b78cfc
   m_configObjects: {}

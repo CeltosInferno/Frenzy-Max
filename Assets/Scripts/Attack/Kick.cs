@@ -26,6 +26,7 @@ namespace AttackSystem
         {
             if (Input.GetButtonDown(inputAxisName) && CheckNoCombo())
             {
+                gameObject.GetComponentInParent<Frenzy>().Add(20);
                 animator.SetTrigger(animTriggerName);
                 Transform tr = animator.GetBoneTransform(HumanBodyBones.RightFoot);
                 RaycastHit[] hits = Physics.SphereCastAll(tr.position, radius, Vector3.zero);
