@@ -12,9 +12,11 @@ public class TriggerCollisionDetection : StateMachineBehaviour
     private readonly List<Collider> hasCollided = new List<Collider>(100);
     private int frenzyAmount;
     private int damage;
+    public int capLimit = 1;
 
     private int FrenzyAmount(Animator animator) => animator.GetInteger("Frenzy" + stateName);
     private int Damage(Animator animator) => animator.GetInteger("Dmg" + stateName);
+    public bool CapLimited(Animator animator) => animator.gameObject.GetComponent<Frenzy>().FrenesyMode == Frenzy.FrenesyState.Lower;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -30,7 +32,15 @@ public class TriggerCollisionDetection : StateMachineBehaviour
         Transform tr = animator.GetBoneTransform(castBone);
         Collider[] hits = Physics.OverlapSphere(tr.position, radius);
         EnumerableQuery<Collider> query = new EnumerableQuery<Collider>(hits);
-        Trigger(animator, query.Where(h => captureTags.Contains(h.gameObject.tag) && !hasCollided.Contains(h)).ToArray());
+        IQueryable<Collider> q = 
+            query.Where(h => captureTags.Contains(h.gameObject.tag) && !hasCollided.Contains(h));
+        Collider[] finalHits = q.ToArray();
+        if (CapLimited(animator) && q.Count() > 0)
+        {
+            q = q.OrderBy(h => (h.transform.position - tr.position).sqrMagnitude);
+            finalHits = new Collider[] { q.First() };
+        }
+        Trigger(animator, finalHits);
     }
 
     private void Trigger(Animator animator, params Collider[] hits)
