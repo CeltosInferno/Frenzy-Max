@@ -6,10 +6,11 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public EnnemyStats ennemyStats;
-    public int lifePoints;
     public float deathTime = 5;
     public GameObject explosion;
+    public State resetState;
 
+    private int lifePoints;
     private Rigidbody rigidbody;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
@@ -48,12 +49,18 @@ public class EnemyController : MonoBehaviour
         navMeshAgent.enabled = false;
         GetComponent<StateController>().enabled = false;
         animator.SetBool("IsDead", true);
-        StartCoroutine(Disable(deathTime, explosion));
+        StartCoroutine(DisableAndReset(deathTime, explosion));
     }
 
-    IEnumerator Disable(float time, GameObject objToInstanciate)
+    IEnumerator DisableAndReset(float time, GameObject objToInstanciate)
     {
         yield return new WaitForSeconds(time);
+        collider.enabled = true;
+        lifePoints = ennemyStats.lifePoints;
+        navMeshAgent.enabled = true;
+        GetComponent<StateController>().enabled = true;
+        GetComponent<StateController>().currentState = resetState;
+        animator.SetBool("IsDead", false);
         gameObject.SetActive(false);
         GameObject instanciated = Instantiate(objToInstanciate, transform.position, Quaternion.identity);
     }
