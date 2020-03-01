@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
         started = false;
         if (storeToHighScore)
         {
-            // Do Stuff
+            gameObject.GetComponent<HighScores>().AddScore(timer);
         }
         if (reset) ResetTimer();
     }

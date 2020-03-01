@@ -60,7 +60,7 @@ public class HighScores : MonoBehaviour
 
     public void AddScore(int score)
     {
-        if (score > Scores[Scores.Count - 1])
+        if (score < Scores[Scores.Count - 1])
         {
             Scores.Add(score);
             Sort();
