@@ -5007,10 +5007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAxisName: Kick
-  captureTags:
-  - Enemy
-  radius: 2
-  dealtDamageFrenzyAmount: 1
+  dealtDamageFrenzyAmount: -1
   animTriggerName: Kick
   damage: 1
 --- !u!114 &9162348926807610940
@@ -5026,10 +5023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAxisName: Punch
-  captureTags:
-  - Enemy
-  radius: 2
-  dealtDamageFrenzyAmount: 1
+  dealtDamageFrenzyAmount: -1
   animTriggerName: Punch
   damage: 1
 --- !u!114 &3408024453492419198
@@ -5049,14 +5043,10 @@ MonoBehaviour:
   - Punch
   - Punch
   timeBetweenInputs: 1
-  castBone: 17
-  radius: 2
-  captureTags:
-  - Enemy
   animationResetTrigger: Punch
   animationSetTrigger: ComboPunch
-  dealtDamageFrenzyAmount: 2
-  damage: 1
+  dealtDamageFrenzyAmount: -3
+  damage: 2
 --- !u!114 &8960346942703454453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5074,14 +5064,10 @@ MonoBehaviour:
   - Kick
   - Kick
   timeBetweenInputs: 0
-  castBone: 6
-  radius: 2
-  captureTags:
-  - Enemy
   animationResetTrigger: Kick
   animationSetTrigger: ComboKick
-  dealtDamageFrenzyAmount: 2
-  damage: 1
+  dealtDamageFrenzyAmount: -3
+  damage: 2
 --- !u!1 &7285698296197439199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5129,10 +5115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAxisName: Kick
-  captureTags:
-  - Enemy
-  radius: 2
-  dealtDamageFrenzyAmount: -1
+  dealtDamageFrenzyAmount: 1
   animTriggerName: Kick
   damage: 1
 --- !u!114 &2810244989199537812
@@ -5148,10 +5131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAxisName: Punch
-  captureTags:
-  - Enemy
-  radius: 2
-  dealtDamageFrenzyAmount: -1
+  dealtDamageFrenzyAmount: 1
   animTriggerName: Punch
   damage: 1
 --- !u!114 &5020685621070113755
@@ -5170,15 +5150,13 @@ MonoBehaviour:
   - Punch
   - Punch
   - Punch
+  - Punch
+  - Punch
   timeBetweenInputs: 2
-  castBone: 18
-  radius: 2
-  captureTags:
-  - Enemy
   animationResetTrigger: Punch
   animationSetTrigger: ComboPunch
-  dealtDamageFrenzyAmount: -2
-  damage: 1
+  dealtDamageFrenzyAmount: 3
+  damage: 2
 --- !u!114 &7680180213666560899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5195,12 +5173,10 @@ MonoBehaviour:
   - Kick
   - Kick
   - Kick
+  - Kick
+  - Kick
   timeBetweenInputs: 2
-  castBone: 5
-  radius: 2
-  captureTags:
-  - Enemy
   animationResetTrigger: Kick
   animationSetTrigger: ComboKick
-  dealtDamageFrenzyAmount: -2
-  damage: 1
+  dealtDamageFrenzyAmount: 3
+  damage: 2
