@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2010d8810bed7f64ea3ef835386b7157
+  - enabled: 1
+    path: Assets/Scenes/Highscores.unity
+    guid: 2dad70e8d8bb1bf479c63f74422f490e
+  - enabled: 1
     path: Assets/Scenes/TutoMobi.unity
     guid: 70886386b680a864e9b8a7c815f5e406
   - enabled: 1
