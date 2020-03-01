@@ -14,7 +14,7 @@ namespace UnityStandardAssets._2D
         public float zSmooth = 8f;
         public Vector3 maxXAndYAndZ; // The maximum x and y coordinates the camera can have. + z
         public Vector3 minXAndYAndZ; // The minimum x and y coordinates the camera can have. + z
-        public Vector3 offset;
+        private Vector3 offset;
 
 
 
@@ -25,7 +25,7 @@ namespace UnityStandardAssets._2D
         {
             // Setting up the reference.
             m_Player = GameObject.FindGameObjectWithTag("Player").transform;
-            offset = new Vector3(0, transform.position.y, transform.position.z);
+            offset = new Vector3(transform.position.x - m_Player.position.x, transform.position.y - m_Player.position.y, transform.position.z - m_Player.position.z);
         }
 
 
