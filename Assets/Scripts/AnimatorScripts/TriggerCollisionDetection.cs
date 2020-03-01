@@ -24,6 +24,7 @@ public class TriggerCollisionDetection : StateMachineBehaviour
         hasCollided.Clear();
         frenzyAmount = FrenzyAmount(animator);
         damage = Damage(animator);
+        animator.SetBool("Fighting", true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -41,6 +42,11 @@ public class TriggerCollisionDetection : StateMachineBehaviour
             finalHits = new Collider[] { q.First() };
         }
         Trigger(animator, finalHits);
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.SetBool("Fighting", false);
     }
 
     private void Trigger(Animator animator, params Collider[] hits)

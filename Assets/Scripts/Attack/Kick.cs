@@ -32,7 +32,7 @@ namespace AttackSystem
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetButtonDown(inputAxisName) && CheckNoCombo())
+            if (Input.GetButtonDown(inputAxisName) && CheckNoCombo() && !animator.GetBool("Fighting"))
             {
                 animator.SetTrigger(animTriggerName);
                 SoundManager.instance.PlaySound(kick);
