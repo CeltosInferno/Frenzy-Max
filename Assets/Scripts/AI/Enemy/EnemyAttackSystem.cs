@@ -46,7 +46,7 @@ public class EnemyAttackSystem : MonoBehaviour
                 animator.SetTrigger("Kick");
             }
 
-            frenzy.Add(damages);
+            frenzy.AddFromDamage(damages);
 
             waitTime = Random.Range(minWaitTime, maxWaitTime);
             recordTime = Time.time;
