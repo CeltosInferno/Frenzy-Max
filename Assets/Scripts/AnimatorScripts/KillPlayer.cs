@@ -9,6 +9,7 @@ public class KillPlayer : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponent<Frenzy>().Reset();
+        GameObject.FindGameObjectWithTag("Manager").GetComponentInChildren<Timer>().EndTimer();
         SceneManager.LoadScene(0);
     }
 }
