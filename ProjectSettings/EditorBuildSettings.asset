@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelArena.unity
     guid: 435a4d03f12fd1847b3f4fd114b78cfc
   - enabled: 1
+    path: Assets/Scenes/LevelBoss.unity
+    guid: e3bfd74d70a58dd47a43dafa6c94b72d
+  - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: abaf0acad3761ce4b96ced84425d15e9
   m_configObjects: {}
