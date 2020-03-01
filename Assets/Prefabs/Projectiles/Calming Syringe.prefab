@@ -111,7 +111,7 @@ MonoBehaviour:
   direction: {x: -0.37084532, y: 0, z: 0.92869467}
   speed: 5
   bulletHit: {fileID: 8300000, guid: 4239e4a4ccb6b2644b69c0f7cff35dd1, type: 3}
-  amount: 5
+  amount: 10
 --- !u!54 &-5462279616714679177
 Rigidbody:
   m_ObjectHideFlags: 0

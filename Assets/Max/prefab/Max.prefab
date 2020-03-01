@@ -5056,7 +5056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAxisName: Kick
-  dealtDamageFrenzyAmount: -1
+  dealtDamageFrenzyAmount: -2
   animTriggerName: Kick
   damage: 1
   kick: {fileID: 8300000, guid: fa74b5298a848b94f9bd6fd46694639a, type: 3}
@@ -5073,7 +5073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAxisName: Punch
-  dealtDamageFrenzyAmount: -1
+  dealtDamageFrenzyAmount: -2
   animTriggerName: Punch
   damage: 1
   punch: {fileID: 8300000, guid: ce1d56a1cfcf27d4096a26d474e5034e, type: 3}
@@ -5096,7 +5096,7 @@ MonoBehaviour:
   timeBetweenInputs: 1
   animationResetTrigger: Punch
   animationSetTrigger: ComboPunch
-  dealtDamageFrenzyAmount: -3
+  dealtDamageFrenzyAmount: -6
   damage: 2
   clip: {fileID: 8300000, guid: ce1d56a1cfcf27d4096a26d474e5034e, type: 3}
 --- !u!114 &8960346942703454453
@@ -5118,7 +5118,7 @@ MonoBehaviour:
   timeBetweenInputs: 0
   animationResetTrigger: Kick
   animationSetTrigger: ComboKick
-  dealtDamageFrenzyAmount: -3
+  dealtDamageFrenzyAmount: -6
   damage: 2
   clip: {fileID: 8300000, guid: fa74b5298a848b94f9bd6fd46694639a, type: 3}
 --- !u!198 &160936356957378370
@@ -9890,7 +9890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAxisName: Kick
-  dealtDamageFrenzyAmount: 1
+  dealtDamageFrenzyAmount: 6
   animTriggerName: Kick
   damage: 1
   kick: {fileID: 8300000, guid: 9bec0ffaa522353468a7f4c249f00168, type: 3}
@@ -9907,7 +9907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAxisName: Punch
-  dealtDamageFrenzyAmount: 1
+  dealtDamageFrenzyAmount: 6
   animTriggerName: Punch
   damage: 1
   punch: {fileID: 8300000, guid: e2c8ca173c16c7d408db231e6bf9ce35, type: 3}
@@ -9932,7 +9932,7 @@ MonoBehaviour:
   timeBetweenInputs: 2
   animationResetTrigger: Punch
   animationSetTrigger: ComboPunch
-  dealtDamageFrenzyAmount: 3
+  dealtDamageFrenzyAmount: 10
   damage: 2
   clip: {fileID: 8300000, guid: e2c8ca173c16c7d408db231e6bf9ce35, type: 3}
 --- !u!114 &7680180213666560899
@@ -9956,6 +9956,6 @@ MonoBehaviour:
   timeBetweenInputs: 2
   animationResetTrigger: Kick
   animationSetTrigger: ComboKick
-  dealtDamageFrenzyAmount: 3
+  dealtDamageFrenzyAmount: 10
   damage: 2
   clip: {fileID: 8300000, guid: 9bec0ffaa522353468a7f4c249f00168, type: 3}
