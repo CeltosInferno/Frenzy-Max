@@ -1463,7 +1463,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1321760374}
   - component: {fileID: 1321760373}
-  - component: {fileID: 1321760372}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1471,14 +1470,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1321760372
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321760371}
-  m_Enabled: 1
 --- !u!20 &1321760373
 Camera:
   m_ObjectHideFlags: 0
@@ -1603,6 +1594,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4145200723294795356, guid: 1cb8624cc9a84fb49bee9979a59870ce,
+        type: 3}
+      propertyPath: playAnnouncerOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145200723294795356, guid: 1cb8624cc9a84fb49bee9979a59870ce,
+        type: 3}
+      propertyPath: announcer
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f68f83c9ca15074bbd1e7dd48f08638, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cb8624cc9a84fb49bee9979a59870ce, type: 3}
 --- !u!1 &1845206753

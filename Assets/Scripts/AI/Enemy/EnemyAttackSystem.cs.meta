@@ -3,7 +3,12 @@ guid: 79fc43980b7edf748b57641deeac9dc9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - projectile: {instanceID: 0}
+  - projectileSpawn: {instanceID: 0}
+  - enemyPunch: {fileID: 8300000, guid: 5b506c4dc3940a44185a9e25304557e9, type: 3}
+  - enemyKick: {fileID: 8300000, guid: b0cd052581bc8884bb0712c51848f3e2, type: 3}
+  - enemyRangedAttack: {fileID: 8300000, guid: f3b6418a16363ab4bb6409e64630858a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

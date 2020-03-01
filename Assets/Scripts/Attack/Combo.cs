@@ -13,6 +13,7 @@ namespace AttackSystem
         public string animationSetTrigger;
         public int dealtDamageFrenzyAmount = 1;
         public int damage = 1;
+        public AudioClip clip;
 
         private int seqCursor = 0;
         private float timer = 0.0f;
@@ -44,7 +45,7 @@ namespace AttackSystem
                     timer = 0.0f;
                 }
 
-                if (Input.GetButtonDown(inputAxisSequence[seqCursor]))
+                if (Input.GetButtonDown(inputAxisSequence[seqCursor]) && !animator.GetBool("Fighting"))
                 {
                     seqCursor++;
                     timer = 0.0f;
@@ -54,6 +55,7 @@ namespace AttackSystem
             if (seqCursor >= inputAxisSequence.Length)
             {
                 Triggered = true;
+                SoundManager.instance.PlaySound(clip);
                 animator.ResetTrigger(animationResetTrigger);
                 animator.SetTrigger(animationSetTrigger);
                 seqCursor = 0;
