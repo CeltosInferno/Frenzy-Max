@@ -124,6 +124,7 @@ MonoBehaviour:
     type: 2}
   soundMixerGroup: {fileID: 4105788577132798276, guid: 839d8316ab181f642bb6fbb1b04e8ac6,
     type: 2}
+  musicClip: {fileID: 8300000, guid: 0f43cfce3d25e4546b201471baba8308, type: 3}
 --- !u!82 &6416642006195647128
 AudioSource:
   m_ObjectHideFlags: 0
