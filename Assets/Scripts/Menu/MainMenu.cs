@@ -7,12 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("TutoMobi", LoadSceneMode.Single);
     }
 
     public void GoToHighscore()
     {
-        SceneManager.LoadScene("Highscore", LoadSceneMode.Single);
+        SceneManager.LoadScene("Highscores", LoadSceneMode.Single);
     }
 
     public void GoToCredits()
