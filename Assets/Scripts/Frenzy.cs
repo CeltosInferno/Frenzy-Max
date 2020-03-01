@@ -62,6 +62,13 @@ public class Frenzy : MonoBehaviour
         Value += amount;
     }
 
+    public void AddFromDamage(int amount)
+    {
+        amount = System.Math.Abs(amount);
+        if (FrenesyMode == FrenesyState.Lower) Add(-amount);
+        if (FrenesyMode == FrenesyState.Upper) Add(amount);
+    }
+
     private void Die()
     {
         Debug.Log("You are dead !");
