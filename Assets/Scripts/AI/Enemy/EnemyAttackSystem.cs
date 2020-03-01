@@ -79,7 +79,7 @@ public class EnemyAttackSystem : MonoBehaviour
             projectile.GetComponent<Projectile>().direction = transform.forward;
             waitTime = Random.Range(minWaitTime, maxWaitTime);
             recordTime = Time.time;
-            SoundManager.instance.PlaySound(enemyKick);
+            SoundManager.instance.PlaySound(enemyRangedAttack);
         }
     }
 
