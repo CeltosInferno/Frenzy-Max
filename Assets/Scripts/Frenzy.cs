@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Frenzy : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Frenzy : MonoBehaviour
     [SerializeField] private int absSwitchValue = 10;
     [SerializeField] private GameObject lowerPlayerEntity = null;
     [SerializeField] private GameObject upperPlayerEntity = null;
+    [SerializeField] private float upperScale = 1.5f;
+    [SerializeField] private float lowerSpeed = 2.0f;
     private Animator animator;
     private new Rigidbody rigidbody;
 
@@ -94,12 +97,16 @@ public class Frenzy : MonoBehaviour
             lowerPlayerEntity.SetActive(false);
             upperPlayerEntity.SetActive(true);
             FrenesyMode = FrenesyState.Upper;
+            gameObject.transform.localScale = new Vector3(upperScale, upperScale, upperScale);
+            gameObject.GetComponent<ThirdPersonCharacter>().SpeedMultiplier = 1.0f;
         }
         else
         {
             upperPlayerEntity.SetActive(false);
             lowerPlayerEntity.SetActive(true);
             FrenesyMode = FrenesyState.Lower;
+            gameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            gameObject.GetComponent<ThirdPersonCharacter>().SpeedMultiplier = lowerSpeed;
         }
     }
 
