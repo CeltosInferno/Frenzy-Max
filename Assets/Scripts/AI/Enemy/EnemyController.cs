@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     public EnnemyStats ennemyStats;
 
-    private Rigidbody rigidbody;
+    private new Rigidbody rigidbody;
     private NavMeshAgent navMeshAgent;
     public int lifePoints;
 
