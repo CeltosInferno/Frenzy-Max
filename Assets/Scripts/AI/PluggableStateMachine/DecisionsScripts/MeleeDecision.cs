@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decisions/MeleeEnemy")]
-public class NewBehaviourScript : Decision
+[CreateAssetMenu(menuName = "PluggableAI/Decisions/MeleeDecision")]
+public class MeleeDecision : Decision
 {
     public override bool Decide(StateController controller)
     {

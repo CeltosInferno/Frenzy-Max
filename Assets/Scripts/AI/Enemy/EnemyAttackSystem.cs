@@ -15,6 +15,7 @@ public class EnemyAttackSystem : MonoBehaviour
     private float recordTime;
     private float waitTime;
     private int randAttack;
+    private Frenzy frenzy;
 
 
 
@@ -22,6 +23,7 @@ public class EnemyAttackSystem : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        frenzy = GameObject.FindGameObjectWithTag("Player").GetComponent<Frenzy>();
     }
 
     void Update()
@@ -43,6 +45,9 @@ public class EnemyAttackSystem : MonoBehaviour
             {
                 animator.SetTrigger("Kick");
             }
+
+            frenzy.Add(damages);
+
             waitTime = Random.Range(minWaitTime, maxWaitTime);
             recordTime = Time.time;
         }

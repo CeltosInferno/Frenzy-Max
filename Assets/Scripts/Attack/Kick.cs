@@ -12,6 +12,7 @@ namespace AttackSystem
         public float radius = 2.0f;
         public int dealtDamageFrenzyAmount = 1;
         public string animTriggerName = "Kick";
+        public int damage = 1;
 
         private Animator animator;
 
@@ -46,6 +47,15 @@ namespace AttackSystem
         private void Trigger(params RaycastHit[] hits)
         {
             gameObject.GetComponentInParent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
+            foreach (RaycastHit hit in hits)
+            {
+                switch (hit.collider.gameObject.tag)
+                {
+                    case "Enemy":
+                        hit.collider.gameObject.GetComponent<EnemyController>().Attack(damage);
+                        break;
+                }
+            }
         }
     }
 }

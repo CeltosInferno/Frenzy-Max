@@ -15,6 +15,7 @@ namespace AttackSystem
         public string animationResetTrigger;
         public string animationSetTrigger;
         public int dealtDamageFrenzyAmount = 1;
+        public int damage = 1;
 
         private int seqCursor = 0;
         private float timer = 0.0f;
@@ -71,6 +72,15 @@ namespace AttackSystem
         private void Trigger(params RaycastHit[] hits)
         {
             gameObject.GetComponentInParent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
+            foreach (RaycastHit hit in hits)
+            {
+                switch (hit.collider.gameObject.tag)
+                {
+                    case "Enemy":
+                        hit.collider.gameObject.GetComponent<EnemyController>().Attack(damage);
+                        break;
+                }
+            }
         }
     }
 }
