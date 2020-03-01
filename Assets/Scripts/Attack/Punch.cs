@@ -14,6 +14,8 @@ namespace AttackSystem
 
         private Animator animator;
 
+        public AudioClip punch;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -30,8 +32,9 @@ namespace AttackSystem
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetButtonDown(inputAxisName) && CheckNoCombo())
+            if (Input.GetButtonDown(inputAxisName) && CheckNoCombo() && !animator.GetBool("Fighting"))
             {
+                SoundManager.instance.PlaySound(punch);
                 animator.SetTrigger(animTriggerName);
             }
         }

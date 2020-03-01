@@ -7,13 +7,30 @@ using UnityEngine.SceneManagement;
 public class CheckLevelEnd : MonoBehaviour
 {
     public string[] excludeScenes;
-    private Teleporter[] teleporters;
+    private GameObject[] teleporters;
 
     public bool Cleared { get; private set; } = false;
 
     void Start()
     {
-        teleporters = GameObject.FindObjectsOfType<Teleporter>();
+        SceneManager.sceneLoaded += OnLoad;
+        OnLoad(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnLoad;
+    }
+
+    void OnLoad(Scene scene, LoadSceneMode mode)
+    {
+        teleporters = GameObject.FindGameObjectsWithTag("Teleporter");
+        Cleared = false;
+
+        foreach (var tp in teleporters)
+        {
+            tp.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -26,7 +43,7 @@ public class CheckLevelEnd : MonoBehaviour
             Cleared = true;
             foreach (var tp in teleporters)
             {
-                tp.gameObject.SetActive(true);
+                tp.SetActive(true);
             }
         }
     }
