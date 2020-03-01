@@ -945,6 +945,8 @@ MonoBehaviour:
   absSwitchValue: 10
   lowerPlayerEntity: {fileID: 7285698296197439199}
   upperPlayerEntity: {fileID: 4047080406120269997}
+  upperScale: 1.5
+  lowerSpeed: 2
   maxDeath: {fileID: 8300000, guid: 0e01f5a3f3323244b8d7508c54860e56, type: 3}
 --- !u!54 &1430954028587149435
 Rigidbody:
@@ -5058,7 +5060,7 @@ MonoBehaviour:
   inputAxisName: Kick
   dealtDamageFrenzyAmount: -2
   animTriggerName: Kick
-  damage: 1
+  damage: 2
   kick: {fileID: 8300000, guid: fa74b5298a848b94f9bd6fd46694639a, type: 3}
 --- !u!114 &9162348926807610940
 MonoBehaviour:
@@ -9892,7 +9894,7 @@ MonoBehaviour:
   inputAxisName: Kick
   dealtDamageFrenzyAmount: 6
   animTriggerName: Kick
-  damage: 1
+  damage: 2
   kick: {fileID: 8300000, guid: 9bec0ffaa522353468a7f4c249f00168, type: 3}
 --- !u!114 &2810244989199537812
 MonoBehaviour:
