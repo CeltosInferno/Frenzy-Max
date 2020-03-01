@@ -15,10 +15,12 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Animator animator;
     private Collider collider;
+    private bool alive = true;
     
     // Start is called before the first frame update
     void Start()
     {
+        alive = true;
         lifePoints = ennemyStats.lifePoints;
         navMeshAgent = GetComponent<NavMeshAgent>();
         rigidbody = GetComponent<Rigidbody>();
@@ -29,7 +31,11 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lifePoints <= 0) Kill();
+        if (lifePoints <= 0 && alive)
+        {
+            Kill();
+            alive = false;
+        }
     }
 
     public void Attack(int damages)
@@ -44,6 +50,7 @@ public class EnemyController : MonoBehaviour
 
     public void Kill()
     {
+        rigidbody.useGravity = false;
         collider.enabled = false;
         navMeshAgent.isStopped = true;
         navMeshAgent.enabled = false;
@@ -55,6 +62,7 @@ public class EnemyController : MonoBehaviour
     IEnumerator DisableAndReset(float time, GameObject objToInstanciate)
     {
         yield return new WaitForSeconds(time);
+        alive = true;
         collider.enabled = true;
         lifePoints = ennemyStats.lifePoints;
         navMeshAgent.enabled = true;
