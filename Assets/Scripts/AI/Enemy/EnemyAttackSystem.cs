@@ -7,8 +7,9 @@ public class EnemyAttackSystem : MonoBehaviour
 {
     public float minWaitTime;
     public float maxWaitTime;
+    public float impactDelay = 0.55f;
     public bool fighting { get; set; }
-    public Projectile projectile;
+    public GameObject projectile;
     public Transform projectileSpawn;
 
     private Animator animator;
@@ -46,7 +47,7 @@ public class EnemyAttackSystem : MonoBehaviour
                 animator.SetTrigger("Kick");
             }
 
-            frenzy.AddFromDamage(damages);
+            StartCoroutine(ApplyAttack(impactDelay, damages));
             //Vector3 dir = frenzy.transform.position - transform.position;
             //dir.y = 0;
             //frenzy.Knockback(dir.normalized, 1000);
@@ -55,12 +56,19 @@ public class EnemyAttackSystem : MonoBehaviour
             recordTime = Time.time;
         }
     }
+
+    IEnumerator ApplyAttack(float time, int damages)
+    {
+        yield return new WaitForSeconds(time);
+        frenzy.AddFromDamage(damages);
+    }
+
     public void RangedAttack(int damages)
     {
         if (IsTimerElapsed())
         {
             Instantiate(projectile, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
-            projectile.direction = transform.forward;
+            projectile.GetComponent<Projectile>().direction = transform.forward;
             waitTime = Random.Range(minWaitTime, maxWaitTime);
             recordTime = Time.time;
         }
