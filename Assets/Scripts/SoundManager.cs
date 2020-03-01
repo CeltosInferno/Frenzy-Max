@@ -14,7 +14,10 @@ public class SoundManager : MonoBehaviour
     private readonly List<AudioClip> queue = new List<AudioClip>(10);
 
     public AudioClip musicClip;
+    public AudioClip announcer;
     public bool playMusicOnStart = false;
+    public bool playAnnouncerOnStart = false;
+
 
     public static SoundManager instance = null;
 
@@ -48,6 +51,7 @@ public class SoundManager : MonoBehaviour
         sound.ForEach(s => s.outputAudioMixerGroup = soundMixerGroup);
 
         if (playMusicOnStart) PlayMusic(musicClip);
+        if (playAnnouncerOnStart) PlaySound(announcer);
     }
 
     private void Update()
