@@ -2056,7 +2056,53 @@ SkinnedMeshRenderer:
   - {fileID: 4000012923443644}
   - {fileID: 4000010039900942}
   - {fileID: 4000010053789652}
-  m_BlendShapeWeights: []
+  m_BlendShapeWeights:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   m_RootBone: {fileID: 4000013638135094}
   m_AABB:
     m_Center: {x: -0.000019609928, y: -0.09612441, z: 0.10423359}
@@ -4973,6 +5019,8 @@ GameObject:
   - component: {fileID: 9162348926807610940}
   - component: {fileID: 3408024453492419198}
   - component: {fileID: 8960346942703454453}
+  - component: {fileID: 7080865636933159159}
+  - component: {fileID: 1549389237}
   m_Layer: 0
   m_Name: Berserk
   m_TagString: Untagged
@@ -4988,7 +5036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4047080406120269997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000061273575, y: 0.84709454, z: 0.015063643}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000011581357332}

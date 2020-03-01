@@ -13,6 +13,8 @@ public class SoundManager : MonoBehaviour
     private readonly List<AudioSource> sound = new List<AudioSource>();
     private readonly List<AudioClip> queue = new List<AudioClip>(10);
 
+    public AudioClip musicClip;
+
     public static SoundManager instance = null;
 
     private void Awake()
@@ -43,6 +45,8 @@ public class SoundManager : MonoBehaviour
         sound.Capacity = src.Length - 1;
         sound.ForEach(s => s.loop = false);
         sound.ForEach(s => s.outputAudioMixerGroup = soundMixerGroup);
+
+        PlayMusic(musicClip);
     }
 
     private void Update()
