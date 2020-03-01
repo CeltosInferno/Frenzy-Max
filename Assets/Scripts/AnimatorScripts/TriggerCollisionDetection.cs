@@ -44,6 +44,12 @@ public class TriggerCollisionDetection : StateMachineBehaviour
                 case "Enemy":
                     hit.gameObject.GetComponent<EnemyController>().Attack(damage);
                     break;
+                case "Boss":
+                    if (animator.gameObject.GetComponentInParent<Frenzy>().FrenesyMode == Frenzy.FrenesyState.Upper)
+                    {
+                        hit.gameObject.GetComponent<EnemyController>().Attack(damage);
+                    }
+                    break;
             }
         }
     }
