@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac1d9b458d190d41b552eb8632f7952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreSize: 10
+  highScoreSize: 8
   fileName: scores.ikd
   useDefaultScore: 1
   linearDefaultScoreIncrement: 10000
@@ -856,4 +856,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   excludeScenes:
-  - TtgcScene
+  - MainMenu
+  - CreditsMenu
+  - Highscores

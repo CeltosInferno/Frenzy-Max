@@ -76,7 +76,7 @@ public class HighScores : MonoBehaviour
         Scores.Capacity = highScoreSize + 1;
         for (int i = 0; i < highScoreSize; i++)
         {
-            Scores.Add(useDefaultScore ? linearDefaultScoreIncrement * i : 0);
+            Scores.Add(useDefaultScore ? int.MaxValue - (linearDefaultScoreIncrement * i) : int.MaxValue);
         }
 
         Sort();

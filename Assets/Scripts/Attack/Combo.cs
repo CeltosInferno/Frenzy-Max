@@ -9,12 +9,10 @@ namespace AttackSystem
     {
         public string[] inputAxisSequence;
         public float timeBetweenInputs;
-        public HumanBodyBones castBone;
-        public float radius = 2.0f;
-        public string[] captureTags;
         public string animationResetTrigger;
         public string animationSetTrigger;
         public int dealtDamageFrenzyAmount = 1;
+        public int damage = 1;
 
         private int seqCursor = 0;
         private float timer = 0.0f;
@@ -25,7 +23,13 @@ namespace AttackSystem
         // Start is called before the first frame update
         void Start()
         {
-            animator = GetComponent<Animator>();
+            OnEnable();
+        }
+
+        void OnEnable() { 
+            animator = GetComponentInParent<Animator>();
+            animator.SetInteger("Dmg" + animationSetTrigger, damage);
+            animator.SetInteger("Frenzy" + animationSetTrigger, dealtDamageFrenzyAmount);
         }
 
         // Update is called once per frame
@@ -40,21 +44,18 @@ namespace AttackSystem
                     timer = 0.0f;
                 }
 
-                if (Input.GetButton(inputAxisSequence[seqCursor]))
+                if (Input.GetButtonDown(inputAxisSequence[seqCursor]))
                 {
                     seqCursor++;
                     timer = 0.0f;
                 }
             }
-            else
+
+            if (seqCursor >= inputAxisSequence.Length)
             {
                 Triggered = true;
                 animator.ResetTrigger(animationResetTrigger);
                 animator.SetTrigger(animationSetTrigger);
-                Transform tr = animator.GetBoneTransform(castBone);
-                RaycastHit[] hits = Physics.SphereCastAll(tr.position, radius, Vector3.zero);
-                EnumerableQuery<RaycastHit> query = new EnumerableQuery<RaycastHit>(hits);
-                Trigger(query.Where(h => captureTags.Contains(h.collider.gameObject.tag)).ToArray());
                 seqCursor = 0;
                 StartCoroutine("Reset");
             }
@@ -65,11 +66,6 @@ namespace AttackSystem
             yield return new WaitForEndOfFrame();
             Triggered = false;
             yield return null;
-        }
-
-        private void Trigger(params RaycastHit[] hits)
-        {
-            gameObject.GetComponent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
         }
     }
 }

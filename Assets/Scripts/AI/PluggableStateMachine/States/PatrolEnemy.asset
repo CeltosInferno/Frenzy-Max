@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d8c2825774d3f43819a6caea0b1606, type: 3}
+  m_Name: PatrolEnemy
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: be8312f6c048f9048a6c7dc4e535d3ce, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: f6ed3ac64153503448a05788b67b4ab6, type: 2}
+    trueState: {fileID: 11400000, guid: 1f428934f1115fb4888750bebb0b3822, type: 2}
+    falseState: {fileID: 11400000, guid: 55dcb931e0c79124cac9df86a8c62450, type: 2}
+  - decision: {fileID: 11400000, guid: 4eae0467aa563f44183575a761403660, type: 2}
+    trueState: {fileID: 11400000, guid: 3a1c6e2662a14b541945b01b0eb89161, type: 2}
+    falseState: {fileID: 11400000, guid: 55dcb931e0c79124cac9df86a8c62450, type: 2}
