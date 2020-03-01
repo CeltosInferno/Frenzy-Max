@@ -309,7 +309,12 @@ PrefabInstance:
     - target: {fileID: 1430954028587149435, guid: f1242f75017423240a3bf1b7e1b2933e,
         type: 3}
       propertyPath: m_Drag
-      value: 0.001
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430954028587149435, guid: f1242f75017423240a3bf1b7e1b2933e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1242f75017423240a3bf1b7e1b2933e, type: 3}
