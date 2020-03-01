@@ -6,7 +6,7 @@ using UnityEngine;
 public class TriggerCollisionDetection : StateMachineBehaviour
 {
     public float radius = 2.0f;
-    public string[] captureTags = new string[] { "Enemy" };
+    public string[] captureTags = new string[] { "Enemy", "Boss" };
     public HumanBodyBones castBone;
     public string stateName;
     private readonly List<Collider> hasCollided = new List<Collider>(100);
@@ -64,9 +64,10 @@ public class TriggerCollisionDetection : StateMachineBehaviour
                     hit.gameObject.GetComponent<EnemyController>().Attack(damage);
                     break;
                 case "Boss":
+                    Debug.Log("BOSSS TOUCHEE");
                     if (animator.gameObject.GetComponentInParent<Frenzy>().FrenesyMode == Frenzy.FrenesyState.Upper)
                     {
-                        hit.gameObject.GetComponent<EnemyController>().Attack(damage);
+                        hit.gameObject.GetComponent<BossCollider>().Attack(damage);
                     }
                     break;
             }

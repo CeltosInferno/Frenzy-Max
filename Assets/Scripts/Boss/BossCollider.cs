@@ -9,5 +9,6 @@ public class BossCollider : MonoBehaviour
     public void Attack(int damage)
     {
         boss.GetComponent<BossController>().TakeDamage(damage);
+        Debug.Log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
     }
 }
