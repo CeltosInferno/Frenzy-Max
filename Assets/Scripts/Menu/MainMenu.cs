@@ -9,6 +9,16 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void GoToHighscore()
+    {
+        SceneManager.LoadScene("Highscore", LoadSceneMode.Single);
+    }
+
+    public void GoToCredits()
+    {
+        SceneManager.LoadScene("CreditsMenu", LoadSceneMode.Single);
+    }
     public void QuitGame()
     {
         Application.Quit();
