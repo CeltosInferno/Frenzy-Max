@@ -26,6 +26,8 @@ public class Frenzy : MonoBehaviour
     public FrenesyState FrenesyMode { get; private set; } = FrenesyState.Upper;
     public float Ratio { get { return (Value + absMaxValue) / (float)(2 * absMaxValue); } }
 
+    public AudioClip maxDeath;
+
     void Start()
     {
         animator = GetComponentInParent<Animator>();
@@ -36,7 +38,7 @@ public class Frenzy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (System.Math.Abs(Value) >= absMaxValue) Die();
+        if (System.Math.Abs(Value) >= absMaxValue && !animator.GetBool("Death")) Die();
         if (FrenesyMode == FrenesyState.Lower && Value >= absSwitchValue) Switch();
         if (FrenesyMode == FrenesyState.Upper && Value <= -absSwitchValue) Switch();
     }
@@ -73,6 +75,7 @@ public class Frenzy : MonoBehaviour
 
     private void Die()
     {
+        SoundManager.instance.PlaySound(maxDeath);
         Debug.Log("You are dead !");
         animator.SetBool("Death", true);
     }

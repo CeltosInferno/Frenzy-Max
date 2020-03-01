@@ -46,7 +46,7 @@ public class SoundManager : MonoBehaviour
         sound.ForEach(s => s.loop = false);
         sound.ForEach(s => s.outputAudioMixerGroup = soundMixerGroup);
 
-        PlayMusic(musicClip);
+       // PlayMusic(musicClip);
     }
 
     private void Update()

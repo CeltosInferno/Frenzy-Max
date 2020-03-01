@@ -1315,6 +1315,9 @@ MonoBehaviour:
   maxWaitTime: 2
   projectile: {fileID: 0}
   projectileSpawn: {fileID: 0}
+  enemyPunch: {fileID: 8300000, guid: 5b506c4dc3940a44185a9e25304557e9, type: 3}
+  enemyKick: {fileID: 8300000, guid: b0cd052581bc8884bb0712c51848f3e2, type: 3}
+  enemyRangedAttack: {fileID: 8300000, guid: f3b6418a16363ab4bb6409e64630858a, type: 3}
 --- !u!1 &8589623499383426423
 GameObject:
   m_ObjectHideFlags: 0

@@ -945,6 +945,7 @@ MonoBehaviour:
   absSwitchValue: 10
   lowerPlayerEntity: {fileID: 7285698296197439199}
   upperPlayerEntity: {fileID: 4047080406120269997}
+  maxDeath: {fileID: 8300000, guid: 0e01f5a3f3323244b8d7508c54860e56, type: 3}
 --- !u!54 &1430954028587149435
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5058,6 +5059,7 @@ MonoBehaviour:
   dealtDamageFrenzyAmount: -1
   animTriggerName: Kick
   damage: 1
+  kick: {fileID: 8300000, guid: fa74b5298a848b94f9bd6fd46694639a, type: 3}
 --- !u!114 &9162348926807610940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5074,6 +5076,7 @@ MonoBehaviour:
   dealtDamageFrenzyAmount: -1
   animTriggerName: Punch
   damage: 1
+  punch: {fileID: 8300000, guid: ce1d56a1cfcf27d4096a26d474e5034e, type: 3}
 --- !u!114 &3408024453492419198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9888,6 +9891,7 @@ MonoBehaviour:
   dealtDamageFrenzyAmount: 1
   animTriggerName: Kick
   damage: 1
+  kick: {fileID: 8300000, guid: 9bec0ffaa522353468a7f4c249f00168, type: 3}
 --- !u!114 &2810244989199537812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9904,6 +9908,7 @@ MonoBehaviour:
   dealtDamageFrenzyAmount: 1
   animTriggerName: Punch
   damage: 1
+  punch: {fileID: 8300000, guid: e2c8ca173c16c7d408db231e6bf9ce35, type: 3}
 --- !u!114 &5020685621070113755
 MonoBehaviour:
   m_ObjectHideFlags: 0

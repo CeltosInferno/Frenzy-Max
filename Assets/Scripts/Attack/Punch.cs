@@ -14,6 +14,8 @@ namespace AttackSystem
 
         private Animator animator;
 
+        public AudioClip punch;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -32,6 +34,7 @@ namespace AttackSystem
         {
             if (Input.GetButtonDown(inputAxisName) && CheckNoCombo())
             {
+                SoundManager.instance.PlaySound(punch);
                 animator.SetTrigger(animTriggerName);
             }
         }
