@@ -8,17 +8,23 @@ namespace AttackSystem
     public class Kick : MonoBehaviour
     {
         public string inputAxisName = "Kick";
-        public string[] captureTags;
-        public float radius = 2.0f;
         public int dealtDamageFrenzyAmount = 1;
         public string animTriggerName = "Kick";
+        public int damage = 1;
 
         private Animator animator;
 
         // Start is called before the first frame update
         void Start()
         {
+            OnEnable();
+        }
+
+        void OnEnable()
+        {
             animator = GetComponentInParent<Animator>();
+            animator.SetInteger("Dmg" + animTriggerName, damage);
+            animator.SetInteger("Frenzy" + animTriggerName, dealtDamageFrenzyAmount);
         }
 
         // Update is called once per frame
@@ -26,14 +32,10 @@ namespace AttackSystem
         {
             if (Input.GetButtonDown(inputAxisName) && CheckNoCombo())
             {
-                gameObject.GetComponentInParent<Frenzy>().Add(20);
                 animator.SetTrigger(animTriggerName);
-                Transform tr = animator.GetBoneTransform(HumanBodyBones.RightFoot);
-                RaycastHit[] hits = Physics.SphereCastAll(tr.position, radius, Vector3.zero);
-                EnumerableQuery<RaycastHit> query = new EnumerableQuery<RaycastHit>(hits);
-                Trigger(query.Where(h => captureTags.Contains(h.collider.gameObject.tag)).ToArray());
             }
         }
+
         private bool CheckNoCombo()
         {
             foreach (var combo in GetComponents<Combo>())
@@ -41,11 +43,6 @@ namespace AttackSystem
                 if (combo.Triggered) return false;
             }
             return true;
-        }
-
-        private void Trigger(params RaycastHit[] hits)
-        {
-            gameObject.GetComponentInParent<Frenzy>().Add(dealtDamageFrenzyAmount * hits.Length);
         }
     }
 }

@@ -920,7 +920,7 @@ Animator:
   m_GameObject: {fileID: 1000011063643416}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e729e33f4bb379b4aaad01113afc4213, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2b4f6ecf84dab8e4c8bf90f003126462, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -4683,7 +4683,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000013856454652}
-  m_LocalRotation: {x: 0.24806942, y: 0.67394656, z: 0.22253297, w: 0.65934575}
+  m_LocalRotation: {x: 0.24806939, y: 0.67394656, z: 0.22253294, w: 0.65934575}
   m_LocalPosition: {x: -0.0119391205, y: 0.0753923, z: 0.05055625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5012,6 +5012,7 @@ MonoBehaviour:
   radius: 2
   dealtDamageFrenzyAmount: 1
   animTriggerName: Kick
+  damage: 1
 --- !u!114 &9162348926807610940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5030,6 +5031,7 @@ MonoBehaviour:
   radius: 2
   dealtDamageFrenzyAmount: 1
   animTriggerName: Punch
+  damage: 1
 --- !u!114 &3408024453492419198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5054,6 +5056,7 @@ MonoBehaviour:
   animationResetTrigger: Punch
   animationSetTrigger: ComboPunch
   dealtDamageFrenzyAmount: 2
+  damage: 1
 --- !u!114 &8960346942703454453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5078,6 +5081,7 @@ MonoBehaviour:
   animationResetTrigger: Kick
   animationSetTrigger: ComboKick
   dealtDamageFrenzyAmount: 2
+  damage: 1
 --- !u!1 &7285698296197439199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,6 +5134,7 @@ MonoBehaviour:
   radius: 2
   dealtDamageFrenzyAmount: -1
   animTriggerName: Kick
+  damage: 1
 --- !u!114 &2810244989199537812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5148,6 +5153,7 @@ MonoBehaviour:
   radius: 2
   dealtDamageFrenzyAmount: -1
   animTriggerName: Punch
+  damage: 1
 --- !u!114 &5020685621070113755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5172,6 +5178,7 @@ MonoBehaviour:
   animationResetTrigger: Punch
   animationSetTrigger: ComboPunch
   dealtDamageFrenzyAmount: -2
+  damage: 1
 --- !u!114 &7680180213666560899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5196,3 +5203,4 @@ MonoBehaviour:
   animationResetTrigger: Kick
   animationSetTrigger: ComboKick
   dealtDamageFrenzyAmount: -2
+  damage: 1

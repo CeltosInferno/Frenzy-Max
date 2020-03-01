@@ -17,6 +17,7 @@ namespace Projectiles
 
         void OnCollisionEnter(Collision collision)
         {
+            Debug.Log("collision");
             if (collision.gameObject.tag == "Player") ApplyEffectOnPlayer();
             Destroy(gameObject);
         }
