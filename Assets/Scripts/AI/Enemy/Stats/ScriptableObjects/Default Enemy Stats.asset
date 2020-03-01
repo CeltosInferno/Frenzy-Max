@@ -9,6 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1035bd6833998a48b1db4fe3d2a9423, type: 3}
-  m_Name: DistanceDecision
+  m_Script: {fileID: 11500000, guid: 6fc12a95861af1b408373fda3a3e016f, type: 3}
+  m_Name: Default Enemy Stats
   m_EditorClassIdentifier: 
+  moveSpeed: 1
+  lookRange: 10
+  lookSphereCastRadius: 2
+  attackRange: 1
+  attackRate: 1
+  attackForce: 15
+  attackDamage: 1
+  searchDuration: 8
+  searchingTurnSpeed: 120
+  lifePoints: 5

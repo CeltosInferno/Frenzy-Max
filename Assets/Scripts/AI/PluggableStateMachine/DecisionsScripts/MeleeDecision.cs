@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableAI/Decisions/DistanceEnemy")]
-public class DistanceDecision : Decision
+[CreateAssetMenu(menuName = "PluggableAI/Decisions/MeleeEnemy")]
+public class NewBehaviourScript : Decision
 {
     public override bool Decide(StateController controller)
     {
@@ -14,7 +13,7 @@ public class DistanceDecision : Decision
 
     protected bool LookAround(StateController controller)
     {
-        if (controller.currentEnemyType == StateController.EnemyType.ranged)
+        if (controller.currentEnemyType == StateController.EnemyType.melee)
         {
             Transform otherTransform = GameObject.FindGameObjectWithTag("Player").transform;
             if (Vector3.Distance(otherTransform.position, controller.transform.position) <= controller.ennemyStats.lookRange)

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fc12a95861af1b408373fda3a3e016f, type: 3}
-  m_Name: Default Ennemy Stats
+  m_Name: Melee Enemy Stats
   m_EditorClassIdentifier: 
   moveSpeed: 1
   lookRange: 10
@@ -18,7 +18,7 @@ MonoBehaviour:
   attackRange: 1
   attackRate: 1
   attackForce: 15
-  attackDamage: 50
+  attackDamage: 1
   searchDuration: 8
   searchingTurnSpeed: 120
   lifePoints: 5

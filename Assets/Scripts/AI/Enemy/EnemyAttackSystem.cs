@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Projectiles;
 using UnityEngine;
 
 public class EnemyAttackSystem : MonoBehaviour
 {
-    private Animator animator;
     public float minWaitTime;
     public float maxWaitTime;
     public bool fighting { get; set; }
+    public Projectile projectile;
+    public Transform projectileSpawn;
 
+    private Animator animator;
     private float recordTime;
     private float waitTime;
     private int randAttack;
-    
+
 
 
     // Start is called before the first frame update
@@ -27,7 +30,7 @@ public class EnemyAttackSystem : MonoBehaviour
         else animator.SetBool("InFight", false);
     }
 
-    public void RandomAttack(int damages)
+    public void MeleeRandomAttack(int damages)
     {
         if (IsTimerElapsed())
         {
@@ -40,6 +43,16 @@ public class EnemyAttackSystem : MonoBehaviour
             {
                 animator.SetTrigger("Kick");
             }
+            waitTime = Random.Range(minWaitTime, maxWaitTime);
+            recordTime = Time.time;
+        }
+    }
+    public void RangedAttack(int damages)
+    {
+        if (IsTimerElapsed())
+        {
+            Instantiate(projectile, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
+            projectile.direction = transform.forward;
             waitTime = Random.Range(minWaitTime, maxWaitTime);
             recordTime = Time.time;
         }

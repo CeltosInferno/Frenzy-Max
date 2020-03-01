@@ -6,6 +6,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class StateController : MonoBehaviour
 {
+    public EnemyType currentEnemyType;
     public EnnemyStats ennemyStats;
     public State currentState;
 
@@ -13,6 +14,7 @@ public class StateController : MonoBehaviour
     public List<Transform> wayPointList;
     public State remainState;
 
+    [HideInInspector] public enum EnemyType { ranged, melee};
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public ThirdPersonCharacter thirdPersonCharacter;
     [HideInInspector] public int nextWayPoint;
@@ -23,7 +25,7 @@ public class StateController : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         thirdPersonCharacter = GetComponent<ThirdPersonCharacter>();
         navMeshAgent.updateRotation = false;
-        navMeshAgent.updatePosition = true;
+        navMeshAgent.updatePosition = false;
     }
 
     //public void SetupAI()

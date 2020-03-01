@@ -25,7 +25,7 @@ public class AttackAction : Action
             && hit.collider.CompareTag("Player"))
         {
             attackSystem.fighting = true;
-            attackSystem.RandomAttack(controller.ennemyStats.attackDamage);
+            attackSystem.MeleeRandomAttack(controller.ennemyStats.attackDamage);
         }
         else
         {

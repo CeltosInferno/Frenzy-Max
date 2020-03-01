@@ -14,7 +14,7 @@ namespace Projectiles
         void Start()
         {
             Amount = amount;
-            frenzy = GameObject.FindObjectOfType<Frenzy>();
+            frenzy = GameObject.FindGameObjectWithTag("Player").GetComponent<Frenzy>();
         }
 
         protected override void ApplyEffectOnPlayer()

@@ -14,5 +14,12 @@ public class ChaseAction : Action
     {
         controller.navMeshAgent.destination = controller.chaseTarget.position;
         controller.navMeshAgent.isStopped = false;
+        if (controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance)
+        {
+            Vector3 targetPostition = new Vector3(controller.chaseTarget.position.x,
+                controller.transform.position.y,
+                controller.chaseTarget.position.z);
+            controller.transform.LookAt(targetPostition);
+        }
     }
 }
