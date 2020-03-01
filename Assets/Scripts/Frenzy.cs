@@ -18,6 +18,7 @@ public class Frenzy : MonoBehaviour
     [SerializeField] private GameObject lowerPlayerEntity = null;
     [SerializeField] private GameObject upperPlayerEntity = null;
     private Animator animator;
+    private Rigidbody rigidbody;
 
     public enum FrenesyState { Lower, Upper }
 
@@ -28,6 +29,7 @@ public class Frenzy : MonoBehaviour
     void Start()
     {
         animator = GetComponentInParent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
         Init();
     }
 
@@ -96,5 +98,10 @@ public class Frenzy : MonoBehaviour
             lowerPlayerEntity.SetActive(true);
             FrenesyMode = FrenesyState.Lower;
         }
+    }
+
+    public void Knockback(Vector3 direction, float intensity)
+    {
+        rigidbody.AddForce(direction.normalized * intensity);
     }
 }

@@ -47,6 +47,9 @@ public class EnemyAttackSystem : MonoBehaviour
             }
 
             frenzy.AddFromDamage(damages);
+            //Vector3 dir = frenzy.transform.position - transform.position;
+            //dir.y = 0;
+            //frenzy.Knockback(dir.normalized, 1000);
 
             waitTime = Random.Range(minWaitTime, maxWaitTime);
             recordTime = Time.time;

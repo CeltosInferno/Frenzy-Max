@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public EnnemyStats ennemyStats;
-    
+
+    private Rigidbody rigidbody;
     private NavMeshAgent navMeshAgent;
     public int lifePoints;
 
@@ -15,6 +16,7 @@ public class EnemyController : MonoBehaviour
     {
         lifePoints = ennemyStats.lifePoints;
         navMeshAgent = GetComponent<NavMeshAgent>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -30,5 +32,10 @@ public class EnemyController : MonoBehaviour
     public void Attack(int damages)
     {
         lifePoints -= damages;
+    }
+
+    public void Knockback(Vector3 direction, float intensity)
+    {
+        rigidbody.AddForce(direction.normalized * intensity);
     }
 }
