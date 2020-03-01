@@ -544,7 +544,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minWaitTime: 1
   maxWaitTime: 2
-  projectile: {fileID: 0}
+  projectile: {fileID: 5921452386450394076, guid: 9573c0782e3e8f6499755ebbdb7808bd,
+    type: 3}
   projectileSpawn: {fileID: 2099951194400090293}
 --- !u!1 &5424672116152846359
 GameObject:
