@@ -13,6 +13,7 @@ public class TriggerCollisionDetection : StateMachineBehaviour
     private int frenzyAmount;
     private int damage;
     public int capLimit = 1;
+    private bool stop = false;
 
     private int FrenzyAmount(Animator animator) => animator.GetInteger("Frenzy" + stateName);
     private int Damage(Animator animator) => animator.GetInteger("Dmg" + stateName);
@@ -22,6 +23,7 @@ public class TriggerCollisionDetection : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         hasCollided.Clear();
+        stop = false;
         frenzyAmount = FrenzyAmount(animator);
         damage = Damage(animator);
         animator.SetBool("Fighting", true);
@@ -39,7 +41,8 @@ public class TriggerCollisionDetection : StateMachineBehaviour
         if (CapLimited(animator) && q.Count() > 0)
         {
             q = q.OrderBy(h => (h.transform.position - tr.position).sqrMagnitude);
-            finalHits = new Collider[] { q.First() };
+            finalHits = stop ? new Collider[] { } : new Collider[] { q.First() };
+            stop = true;
         }
         Trigger(animator, finalHits);
     }
