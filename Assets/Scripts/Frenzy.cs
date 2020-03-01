@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Frenzy : MonoBehaviour
 {
@@ -17,14 +18,18 @@ public class Frenzy : MonoBehaviour
     [SerializeField] private int absSwitchValue = 10;
     [SerializeField] private GameObject lowerPlayerEntity = null;
     [SerializeField] private GameObject upperPlayerEntity = null;
+    [SerializeField] private float upperScale = 1.5f;
+    [SerializeField] private float lowerSpeed = 2.0f;
     private Animator animator;
-    private Rigidbody rigidbody;
+    private new Rigidbody rigidbody;
 
     public enum FrenesyState { Lower, Upper }
 
     public int Value { get; private set; } = 0;
     public FrenesyState FrenesyMode { get; private set; } = FrenesyState.Upper;
     public float Ratio { get { return (Value + absMaxValue) / (float)(2 * absMaxValue); } }
+
+    public AudioClip maxDeath;
 
     void Start()
     {
@@ -36,7 +41,7 @@ public class Frenzy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (System.Math.Abs(Value) >= absMaxValue) Die();
+        if (System.Math.Abs(Value) >= absMaxValue && !animator.GetBool("Death")) Die();
         if (FrenesyMode == FrenesyState.Lower && Value >= absSwitchValue) Switch();
         if (FrenesyMode == FrenesyState.Upper && Value <= -absSwitchValue) Switch();
     }
@@ -73,6 +78,7 @@ public class Frenzy : MonoBehaviour
 
     private void Die()
     {
+        SoundManager.instance.PlaySound(maxDeath);
         Debug.Log("You are dead !");
         animator.SetBool("Death", true);
     }
@@ -91,12 +97,16 @@ public class Frenzy : MonoBehaviour
             lowerPlayerEntity.SetActive(false);
             upperPlayerEntity.SetActive(true);
             FrenesyMode = FrenesyState.Upper;
+            gameObject.transform.localScale = new Vector3(upperScale, upperScale, upperScale);
+            gameObject.GetComponent<ThirdPersonCharacter>().SpeedMultiplier = 1.0f;
         }
         else
         {
             upperPlayerEntity.SetActive(false);
             lowerPlayerEntity.SetActive(true);
             FrenesyMode = FrenesyState.Lower;
+            gameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            gameObject.GetComponent<ThirdPersonCharacter>().SpeedMultiplier = lowerSpeed;
         }
     }
 

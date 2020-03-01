@@ -8,6 +8,7 @@ namespace Projectiles
     {
         public Vector3 direction;
         public float speed = 1.0f;
+        public AudioClip bulletHit;
 
         // Update is called once per frame
         void Update()
@@ -17,8 +18,11 @@ namespace Projectiles
 
         void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("collision");
-            if (collision.gameObject.tag == "Player") ApplyEffectOnPlayer();
+            if (collision.gameObject.tag == "Player")
+            {
+                SoundManager.instance.PlaySound(bulletHit);
+                ApplyEffectOnPlayer();
+            }
             Destroy(gameObject);
         }
 

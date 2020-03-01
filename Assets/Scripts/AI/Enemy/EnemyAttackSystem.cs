@@ -12,6 +12,11 @@ public class EnemyAttackSystem : MonoBehaviour
     public GameObject projectile;
     public Transform projectileSpawn;
 
+    //used sound effects
+    public AudioClip enemyPunch;
+    public AudioClip enemyKick;
+    public AudioClip enemyRangedAttack;
+
     private Animator animator;
     private float recordTime;
     private float waitTime;
@@ -40,11 +45,14 @@ public class EnemyAttackSystem : MonoBehaviour
             randAttack = Random.Range(0, 2);
             if (randAttack == 0)
             {
+                SoundManager.instance.PlaySound(enemyPunch);
                 animator.SetTrigger("Punch");
             }
             else
             {
+                SoundManager.instance.PlaySound(enemyKick);
                 animator.SetTrigger("Kick");
+
             }
 
             StartCoroutine(ApplyAttack(impactDelay, damages));
@@ -71,6 +79,7 @@ public class EnemyAttackSystem : MonoBehaviour
             projectile.GetComponent<Projectile>().direction = transform.forward;
             waitTime = Random.Range(minWaitTime, maxWaitTime);
             recordTime = Time.time;
+            SoundManager.instance.PlaySound(enemyRangedAttack);
         }
     }
 

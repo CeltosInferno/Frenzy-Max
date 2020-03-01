@@ -681,7 +681,7 @@ MonoBehaviour:
     Thomas\nSoufflet Leonnel\nTexier Yannick\n\nMusic :\nP\xE4ncake (Instrumental)
     by Aussens@iter (c) copyright 2018 Licensed under a Creative Commons Attribution
     Noncommercial  (3.0) license. http://dig.ccmixter.org/files/tobias_weber/58046
-    Ft: Zep Hurme"
+    Ft: Zep Hurme\n\nAnnouncer : \nEnsuque Elie"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a05b8b8e3aaa8614194c0fef0a8166b3, type: 2}
   m_sharedMaterial: {fileID: -8072159975191646996, guid: a05b8b8e3aaa8614194c0fef0a8166b3,
@@ -751,12 +751,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 798244489}
-    characterCount: 314
+    characterCount: 341
     spriteCount: 0
-    spaceCount: 39
-    wordCount: 45
+    spaceCount: 45
+    wordCount: 48
     linkCount: 0
-    lineCount: 16
+    lineCount: 19
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1094,7 +1094,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1321760374}
   - component: {fileID: 1321760373}
-  - component: {fileID: 1321760372}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1102,14 +1101,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1321760372
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321760371}
-  m_Enabled: 1
 --- !u!20 &1321760373
 Camera:
   m_ObjectHideFlags: 0
