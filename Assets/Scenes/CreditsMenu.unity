@@ -677,8 +677,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Chlebowski Quentin\nLanson Guillaume\nLe Corre L\xE9o\nPiot Thomas\nSoufflet
-    Leonnel\nTexier Yannick"
+  m_text: "D\xE9velopp\xE9 par :\nChlebowski Quentin\nLanson Guillaume\nLe Corre
+    L\xE9o\nPiot Thomas\nSoufflet Leonnel\nTexier Yannick\n\nMusique utilis\xE9e
+    :\nP\xE4ncake (Instrumental) by Aussens@iter (c) copyright 2018 Licensed under
+    a Creative Commons Attribution Noncommercial  (3.0) license. http://dig.ccmixter.org/files/tobias_weber/58046
+    Ft: Zep Hurme"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a05b8b8e3aaa8614194c0fef0a8166b3, type: 2}
   m_sharedMaterial: {fileID: -8072159975191646996, guid: a05b8b8e3aaa8614194c0fef0a8166b3,
@@ -707,8 +710,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 44
+  m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -724,7 +727,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 4
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 233
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -748,12 +751,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 798244489}
-    characterCount: 92
+    characterCount: 325
     spriteCount: 0
-    spaceCount: 12
-    wordCount: 13
+    spaceCount: 40
+    wordCount: 46
     linkCount: 0
-    lineCount: 6
+    lineCount: 16
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
