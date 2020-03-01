@@ -16,7 +16,9 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     private Collider collider;
     private bool alive = true;
-    
+
+    public AudioClip explosionSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,7 @@ public class EnemyController : MonoBehaviour
     IEnumerator DisableAndReset(float time, GameObject objToInstanciate)
     {
         yield return new WaitForSeconds(time);
+        SoundManager.instance.PlaySound(explosionSound);
         alive = true;
         collider.enabled = true;
         lifePoints = ennemyStats.lifePoints;
