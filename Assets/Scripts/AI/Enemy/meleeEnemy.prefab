@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ennemyStats: {fileID: 11400000, guid: 970652c2676f8984ea9340fa9aa87bfc, type: 2}
-  deathTime: 5
+  deathTime: 3
   explosion: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
   resetState: {fileID: 11400000, guid: 2b6458d3d3c38ba43994bb2ce53abf14, type: 2}
   explosionSound: {fileID: 8300000, guid: 0b79db1d21179444ea89294d24a943cb, type: 3}
