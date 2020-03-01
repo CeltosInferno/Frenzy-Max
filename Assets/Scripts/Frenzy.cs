@@ -18,7 +18,7 @@ public class Frenzy : MonoBehaviour
     [SerializeField] private GameObject lowerPlayerEntity = null;
     [SerializeField] private GameObject upperPlayerEntity = null;
     private Animator animator;
-    private Rigidbody rigidbody;
+    private new Rigidbody rigidbody;
 
     public enum FrenesyState { Lower, Upper }
 
