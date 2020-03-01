@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Highscores.unity
     guid: 2dad70e8d8bb1bf479c63f74422f490e
   - enabled: 1
+    path: Assets/Scenes/CreditsMenu.unity
+    guid: a5d138bb34ce4774e898c6fa6fa9ced2
+  - enabled: 1
     path: Assets/Scenes/TutoMobi.unity
     guid: 70886386b680a864e9b8a7c815f5e406
   - enabled: 1
