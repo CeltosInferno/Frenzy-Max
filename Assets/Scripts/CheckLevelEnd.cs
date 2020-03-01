@@ -14,6 +14,11 @@ public class CheckLevelEnd : MonoBehaviour
     void Start()
     {
         teleporters = GameObject.FindObjectsOfType<Teleporter>();
+
+        foreach (var tp in teleporters)
+        {
+            tp.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
